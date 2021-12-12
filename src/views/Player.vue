@@ -52,17 +52,15 @@ export default {
   },
   created() {
     const playerId = this.$route.params.id;
+    const baseUrl =
+      "https://cleveland-challenge-cpzq9e57o-lukesherwood.vercel.app/api/";
     axios
-      .get(
-        `https://cle-fe-challenge-services.vercel.app/api/players?playerId=${playerId}`
-      )
-      .then((res) => (this.playerInfo = res.data.playerDetail))
+      .get(baseUrl + `players?playerId=${playerId}`)
+      .then((res) => (this.playerInfo = res.data.playerDetails))
       .catch((err) => console.log(err));
 
     axios
-      .get(
-        `https://cle-fe-challenge-services.vercel.app/api/pitches?playerId=${playerId}`
-      )
+      .get(baseUrl + `pitches?playerId=${playerId}`)
       .then((res) => this.formatPitches(res.data.pitches))
       .catch((err) => console.log(err));
   },

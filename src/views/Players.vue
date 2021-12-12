@@ -20,9 +20,9 @@ export default {
   },
   methods: {},
   created() {
-    console.log("loaded players");
+    const baseUrl =  'https://cleveland-challenge-cpzq9e57o-lukesherwood.vercel.app/api/'
     axios
-      .get(`https://cle-fe-challenge-services.vercel.app/api/players`)
+      .get(baseUrl + `players`)
       .then((res) => (this.players = res.data.players))
       .catch((err) => console.log(err));
   },
