@@ -51,7 +51,6 @@ export default {
     },
   },
   created() {
-    // change playerid to be dynamic and ready for multiple routes.
     const playerId = this.$route.params.id;
     axios
       .get(

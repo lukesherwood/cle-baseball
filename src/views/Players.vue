@@ -20,6 +20,7 @@ export default {
   },
   methods: {},
   created() {
+    console.log("loaded players");
     axios
       .get(`https://cle-fe-challenge-services.vercel.app/api/players`)
       .then((res) => (this.players = res.data.players))

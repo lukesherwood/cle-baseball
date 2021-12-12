@@ -1,15 +1,16 @@
 <template>
   <div id="app">
-    <Players />
+    <Nav />
+    <router-view />
   </div>
 </template>
 
 <script>
-import Players from "./views/Players";
+import Nav from "./components/layout/Nav";
 export default {
   name: "App",
   components: {
-    Players,
+    Nav,
   },
 };
 </script>
