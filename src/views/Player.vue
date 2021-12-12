@@ -11,11 +11,11 @@
   </div>
 </template>
 <script>
-import PlayerBanner from "./PlayerBanner.vue";
-import FilterButtons from "./FilterButtons";
-import Panel from "./layout/Panel.vue";
-import PitchPlot from "./plots/PitchPlot.vue";
-import PitchTable from "./plots/PitchTable.vue";
+import PlayerBanner from "../components/PlayerBanner";
+import FilterButtons from "../components/FilterButtons";
+import Panel from "../components/layout/Panel.vue";
+import PitchPlot from "../components/plots/PitchPlot.vue";
+import PitchTable from "../components/plots/PitchTable.vue";
 import axios from "axios";
 
 export default {
@@ -52,7 +52,7 @@ export default {
   },
   created() {
     // change playerid to be dynamic and ready for multiple routes.
-    const playerId = "106816";
+    const playerId = this.$route.params.id;
     axios
       .get(
         `https://cle-fe-challenge-services.vercel.app/api/players?playerId=${playerId}`

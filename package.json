@@ -11,9 +11,10 @@
     "@": "./src/"
   },
   "dependencies": {
-    "@vue/cli-plugin-babel": "4.1.1",
+    "@vue/cli-plugin-babel": "4.5.15",
     "axios": "0.24.0",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-router": "3.5.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-eslint": "4.1.1",
